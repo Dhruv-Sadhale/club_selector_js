@@ -1,0 +1,219 @@
+/* CSS Styles for Club Grid Templates */
+body{
+     background-color: black; 
+    /* background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Darker tone overlay 
+     repeat;  */
+    font-family: 'Raleway', sans-serif;
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 50vw)); 
+    gap: 50px;
+    
+}
+
+.club-card {
+    background-color: #000000d2;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+    
+}
+/* CSS Styles for Gradual Appearance */
+.club-card {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.club-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.club-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.club-card >h2{
+    text-align: center;
+    color: #55d6cb;
+}
+.club-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5em;
+    color: #55d6cb;
+}
+
+.club-card p {
+    padding: 0 10px 10px;
+    margin: 0;
+    color: #666;
+    text-align: center;
+
+}
+.club-card:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(13px);
+    border: solid aqua;
+
+}
+.club-card:hover figcaption{
+    font-size: 0.6rem;  
+    position: absolute;
+    height: 80px;
+    width: 160px;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(
+        top, rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0) 100% 
+    );
+    color: white;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    border: solid aqua;
+}
+ .club-card{
+ background-color: black;
+ border-radius: 20px;
+ border-color: aqua;
+ transition: 1000ms all;
+ transform-origin: center left;
+ box-shadow: 5px 12px rgba(227, 247, 244, 0.5);  
+ outline: 1px solid black;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+
+} 
+.explore-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:    10px;
+    width: 98.5%;
+    padding: 10px;
+    margin-top: auto;
+    background-color:transparent;
+    color: #fff;
+    border: none;
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-transform: uppercase;
+    /* margin: 25px; */
+    overflow: hidden;
+    position: relative;
+    font-weight: 700;
+}
+.explore-btn::before{
+    content: "";
+    /* top: 0 ; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, transparent, #00fffc, transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s;
+    position: absolute;
+}
+.explore-btn:hover {
+    background: rgb(38, 53, 53);
+    box-shadow: 0 0 20px 5px #00fffc;
+}
+
+/* CSS Styles for Navigation Bar */
+nav {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+/* CSS Styles for Colorful Heading */
+.colorful-heading {
+    /* background: linear-gradient(45deg, #007BFF, #00FF7F); */
+    background: linear-gradient(
+        top, rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0) 100% 
+    );
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+    border: solid aqua;
+    margin: 20px;
+}
+
+.colorful-heading h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    
+}
+/* CSS Styles for Headers and Footers */
+header, footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h2 {
+    font-size: 1.8em;
+}
+
+footer p {
+    margin: 0;
+}
