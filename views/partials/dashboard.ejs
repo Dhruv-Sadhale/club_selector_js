@@ -1,0 +1,42 @@
+<!-- views/dashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 100px;
+        }
+        .dashboard-container {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <% if (details) {%>
+    <h2>Welcome to Your Dashboard</h2>
+    <div class="dashboard-container">
+        <h3>User Information</h3>
+        <!-- <p><strong>Username:</strong> </p> -->
+        <p><strong>Email:</strong> <%= details.loginEmail %></p>
+        <!-- Add more user information as needed -->
+
+        <!-- Add additional dashboard content as needed -->
+        <p>This is your personalized dashboard. Customize it as per your needs.</p>
+
+        <a href="/logout">Logout</a>
+    </div>
+    <% } %>
+</body>
+</html>

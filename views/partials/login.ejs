@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login/Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 100px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Login/Register</h2>
+    <% if (locals.status===true){ %>
+    <form action="/login" method="post">
+        <h3>Login</h3>
+        <label for="loginEmail">Email/Username:</label>
+        <input type="text" id="loginEmail" name="loginEmail" required>
+        <br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Haven't signed up yet? <a href="/register">Sign up</a></p>
+    <% }else{ %>
+    <form action="/register" method="post">
+        <h3>Register</h3>
+        <label for="registerUsername">Username:</label>
+        <input type="text" id="registerUsername" name="registerUsername" required>
+        <br>
+        <label for="registerEmail">Email:</label>
+        <input type="email" id="registerEmail" name="registerEmail" required>
+        <br>
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" name="registerPassword" required>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already registered? <a href="/sign-in">Login</a></p>
+
+    <% } %>
+</body>
+</html>
