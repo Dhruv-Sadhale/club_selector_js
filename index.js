@@ -36,7 +36,15 @@ app.get("/register",(req,res)=>{
 app.get("/logout", (req, res)=>{
 
     res.render(__dirname+"/views/index.ejs");
-})
+});
+let j=1;
+for (let i=1;i<=15;i++){
+app.get(`/${i}`, (req, res)=>{
+    const obj=i;
+    res.render(__dirname+`/views/partials/${j}.ejs`, {obj:obj});
+});
+}
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
