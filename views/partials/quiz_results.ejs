@@ -1,0 +1,18 @@
+<!-- views/quiz_results.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+</head>
+<body>
+  <h2>Quiz Results</h2>
+  <ul>
+    <% userResponses.forEach(response => { %>
+      <li><%= response.question_id %> - <%= response.selected_answer_id %></li>
+    <% }) %>
+  </ul>
+  <!-- Add logic to display club recommendations based on user responses -->
+</body>
+</html>

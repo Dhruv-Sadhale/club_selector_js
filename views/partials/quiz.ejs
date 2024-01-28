@@ -1,0 +1,27 @@
+<!-- views/quiz.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+</head>
+<body>
+  <h2>Club Selector Quiz</h2>
+  <form method="post" action="/quiz">
+    <% questions.forEach(question => { %>
+      <fieldset>
+        <legend><%= question.text %></legend>
+        <% question.answers.forEach(answer => { %>
+          <label>
+            <input type="radio" name="selectedAnswerId" value="<%= answer.id %>">
+            <%= answer.text %>
+          </label><br>
+        <% }) %>
+      </fieldset>
+    <% }) %>
+    <input type="hidden" name="userId" value="<%= userId %>">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

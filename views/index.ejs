@@ -1,166 +1,194 @@
 <%- include("partials/header.ejs") %>
-    <!-- Club Grid Templates -->
-    <div id="club-grid" class="grid-container">
-        <!-- Club 1 -->
-       <!-- Club 1: Astronomy Club -->
-<div class="club-card">
-    <img src="astronomy-club-logo.png" alt="Astronomy Club Logo">
-    <h2>Astronomy Club</h2>
-    <p>Explore the wonders of the universe with like-minded enthusiasts. Join us in stargazing sessions and cosmic adventures.</p>
-    <button class="explore-btn" id="astronomy-explore"><a href="/1">  Explore</a></button>
-    <img src="../astronomy.png" alt="Astronomy Club">
-</div>
+<main>
+    <ul class='slider'>
+      <li class='item' style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+        <div class='content'>
+          <h2 class='title'>Astronomy Club</h2>
+          <p class='description'> Explore the wonders of the universe with like-minded enthusiasts. Join us in stargazing sessions and
+            cosmic adventures. </p>
+            <button class="explore-btn" id="astronomy-explore"><a href="/1"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://i.redd.it/tc0aqpv92pn21.jpg')">
+        <div class='content'>
+          <h2 class='title'>Arts and Crafts Club</h2>
+          <p class='description'>>Unleash your creativity through various artistic expressions. Join us for workshops, exhibitions, and
+            collaborative projects. </p>
+            <button class="explore-btn"><a href="/2"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')">
+        <div class='content'>
+          <h2 class='title'>Boat Club</h2>
+          <p class='description'>Embark on exciting water adventures and learn the art of boatmanship. Join us for regattas,
+            workshops, and nautical experiences.</p>
+            <button class="explore-btn"><a href="/3"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://images7.alphacoders.com/878/878663.jpg')">
+        <div class='content'>
+          <h2 class='title'>Civil Services Aspirant's Club</h2>
+          <p class='description'>
+            Prepare for civil services examinations in a supportive and collaborative environment. Join us for
+            study sessions, mock exams, and discussions.
+          </p>
+          <button class="explore-btn"><a href="/4"> Explore</a></button>
+                </div>
+      </li>
+      <li class='item'
+        style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')">
+        <div class='content'>
+          <h2 class='title'>CSI</h2>
+          <p class='description'>
+            Immerse yourself in the world of cybersecurity and information technology. Join us for workshops,
+                hackathons, and networking events.
+          </p>
+          <button class="explore-btn"><a href="/5"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+        <div class='content'>
+          <h2 class='title'>CoFSUG</h2>
+          <p class='description'>Connect with fellow food enthusiasts and explore the culinary world. Join us for cooking sessions,
+            food tasting events, and culinary competitions </p>
+            <button class="explore-btn"><a href="/6"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+        <div class='content'>
+          <h2 class='title'>Cultural Club</h2>
+          <p class='description'>Celebrate diversity through cultural events, performances, and artistic expressions. Join us for
+            dance, music, and drama.</p>
+            <button class="explore-btn"><a href="/7"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+        <div class='content'>
+          <h2 class='title'>Debate Club</h2>
+          <p class='description'>Sharpen your communication and argumentation skills. Join us for debates, discussions, and public
+            speaking sessions. </p>
+            <button class="explore-btn"><a href="/8"> Explore</a></button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')">
+        <div class='content'>
+          <h2 class='title'>HAM Club</h2>
+          <p class='description'>Explore the world of amateur radio and communication. Join us for radio operation, technology
+            discussions, and field trips </p>
+            <button class="explore-btn"><a href="/9"> Explore</a></button>
+        </div>
+      </li>
+    </ul>
+    <nav class='nav'>
+      <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+      <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+<!--       
+        <div class="content club-card">
+            <img src="robot-study-circle-logo.png" alt="Robot Study Circle Logo">
+            <h2>Robot Study Circle</h2>
+            <p>Dive into robotics and automation. Join us for hands-on projects, competitions, and learning
+                sessions.</p>
+            <button class="explore-btn"><a href="/10"> Explore</a></button>
+        </div>
 
-<!-- Club 2: Arts and Crafts Club -->
-<div class="club-card">
-    <img src="arts-crafts-club-logo.png" alt="Arts and Crafts Club Logo">
-    <h2>Arts and Crafts Club</h2>
-    <p>Unleash your creativity through various artistic expressions. Join us for workshops, exhibitions, and collaborative projects.</p>
-    <button class="explore-btn"><a href="/2">  Explore</a></button>
-</div>
+        <div class="content club-card">
+            <img src="arsc-club-logo.png" alt="ARSC Logo">
+            <h2>ARSC</h2>
+            <p>Explore the world of augmented reality and virtual reality. Join us for workshops, projects, and
+                AR/VR experiences.</p>
+            <button class="explore-btn"><a href="/11"> Explore</a></button>
+        </div>
 
-<!-- Club 3: Boat Club -->
-<div class="club-card">
-    <img src="boat-club-logo.png" alt="Boat Club Logo">
-    <h2>Boat Club</h2>
-    <p>Embark on exciting water adventures and learn the art of boatmanship. Join us for regattas, workshops, and nautical experiences.</p>
-    <button class="explore-btn"><a href="/3">  Explore</a></button>
-</div>
+        
+        <div class="content club-card">
+            <img src="software-development-club-logo.png" alt="Software Development Club Logo">
+            <h2>Software Development Club</h2>
+            <p>Collaborate on software projects and enhance coding skills. Join us for coding challenges,
+                hackathons, and industry talks.</p>
+            <button class="explore-btn"><a href="/12"> Explore</a></button>
+        </div>
 
-<!-- Club 4: Civil Services Aspirant's Club -->
-<div class="club-card">
-    <img src="civil-services-club-logo.png" alt="Civil Services Aspirant's Club Logo">
-    <h2>Civil Services Aspirant's Club</h2>
-    <p>Prepare for civil services examinations in a supportive and collaborative environment. Join us for study sessions, mock exams, and discussions.</p>
-    <button class="explore-btn"><a href="/4">  Explore</a></button>
-</div>
+  
+        <div class="content club-card">
+            <img src="spandan-club-logo.png" alt="Spandan Logo">
+            <h2>Spandan</h2>
+            <p>Experience the world of performing arts. Join us for dance, music, drama, and cultural performances.
+            </p>
+            <button class="explore-btn"><a href="/13"> Explore</a></button>
+        </div>
 
-<!-- Club 5: CSI -->
-<div class="club-card">
-    <img src="csi-club-logo.png" alt="CSI Logo">
-    <h2>CSI</h2>
-    <p>Immerse yourself in the world of cybersecurity and information technology. Join us for workshops, hackathons, and networking events.</p>
-    <button class="explore-btn"><a href="/5">  Explore</a></button>
-</div>
+       
+        <div class="content club-card">
+            <img src="science-club-logo.png" alt="Science Club Logo">
+            <h2>Science Club</h2>
+            <p>Explore the wonders of science through experiments and discussions. Join us for exciting scientific
+                discoveries and projects.</p>
+            <button class="explore-btn"><a href="/14"> Explore</a></button>
+        </div>
 
-<!-- Club 6: CoFSUG -->
-<div class="club-card">
-    <img src="cofsug-club-logo.png" alt="CoFSUG Logo">
-    <h2>CoFSUG</h2>
-    <p>Connect with fellow food enthusiasts and explore the culinary world. Join us for cooking sessions, food tasting events, and culinary competitions.</p>
-    <button class="explore-btn"><a href="/6">  Explore</a></button>
-</div>
+       
+        <div class="content club-card">
+            <img src="mathematics-club-logo.png" alt="Mathematics Club Logo">
+            <h2>Mathematics Club</h2>
+            <p>Dive into the fascinating world of mathematical concepts and problem-solving. Join us for interactive
+                sessions and competitions.</p>
+            <button class="explore-btn"><a href="/15"> Explore</a></button>
+        </div>
 
-<!-- Club 7: Cultural Club -->
-<div class="club-card">
-    <img src="cultural-club-logo.png" alt="Cultural Club Logo">
-    <h2>Cultural Club</h2>
-    <p>Celebrate diversity through cultural events, performances, and artistic expressions. Join us for dance, music, and drama.</p>
-    <button class="explore-btn"><a href="/7">  Explore</a></button>
-</div>
-
-<!-- Club 8: Debate Club -->
-<div class="club-card">
-    <img src="debate-club-logo.png" alt="Debate Club Logo">
-    <h2>Debate Club</h2>
-    <p>Sharpen your communication and argumentation skills. Join us for debates, discussions, and public speaking sessions.</p>
-    <button class="explore-btn"><a href="/8">  Explore</a></button>
-</div>
-
-<!-- Club 9: HAM Club -->
-<div class="club-card">
-    <img src="ham-club-logo.png" alt="HAM Club Logo">
-    <h2>HAM Club</h2>
-    <p>Explore the world of amateur radio and communication. Join us for radio operation, technology discussions, and field trips.</p>
-    <button class="explore-btn"><a href="/9">  Explore</a></button>
-</div>
-
-<!-- Club 10: Robot Study Circle -->
-<div class="club-card">
-    <img src="robot-study-circle-logo.png" alt="Robot Study Circle Logo">
-    <h2>Robot Study Circle</h2>
-    <p>Dive into robotics and automation. Join us for hands-on projects, competitions, and learning sessions.</p>
-    <button class="explore-btn"><a href="/10">  Explore</a></button>
-</div>
-
-<!-- Club 11: ARSC -->
-<div class="club-card">
-    <img src="arsc-club-logo.png" alt="ARSC Logo">
-    <h2>ARSC</h2>
-    <p>Explore the world of augmented reality and virtual reality. Join us for workshops, projects, and AR/VR experiences.</p>
-    <button class="explore-btn"><a href="/11">  Explore</a></button>
-</div>
-
-<!-- Club 12: Software Development Club -->
-<div class="club-card">
-    <img src="software-development-club-logo.png" alt="Software Development Club Logo">
-    <h2>Software Development Club</h2>
-    <p>Collaborate on software projects and enhance coding skills. Join us for coding challenges, hackathons, and industry talks.</p>
-    <button class="explore-btn"><a href="/12">  Explore</a></button>
-</div>
-
-<!-- Club 13: Spandan -->
-<div class="club-card">
-    <img src="spandan-club-logo.png" alt="Spandan Logo">
-    <h2>Spandan</h2>
-    <p>Experience the world of performing arts. Join us for dance, music, drama, and cultural performances.</p>
-    <button class="explore-btn"><a href="/13">  Explore</a></button>
-</div>
-
-<!-- Club 14: Science Club -->
-<div class="club-card">
-    <img src="science-club-logo.png" alt="Science Club Logo">
-    <h2>Science Club</h2>
-    <p>Explore the wonders of science through experiments and discussions. Join us for exciting scientific discoveries and projects.</p>
-    <button class="explore-btn"><a href="/14">  Explore</a></button>
-</div>
-
-<!-- Club 15: Mathematics Club -->
-<div class="club-card">
-    <img src="mathematics-club-logo.png" alt="Mathematics Club Logo">
-    <h2>Mathematics Club</h2>
-    <p>Dive into the fascinating world of mathematical concepts and problem-solving. Join us for interactive sessions and competitions.</p>
-    <button class="explore-btn"><a href="/15">  Explore</a></button>
-</div>
-
-    </div>
+    </div> -->
 
     <!-- Scroll Animation JavaScript -->
     <script>
-        window.addEventListener('scroll', () => {
-            const colorfulHeading = document.querySelector('.club-card');
-            const scrollPosition = window.scrollY;
 
-            colorfulHeading.style.backgroundPositionY = `${scrollPosition}px`;
-        });
-        
-        document.addEventListener('DOMContentLoaded', () => {
-        const clubTemplates = document.querySelectorAll('.club-card');
 
-        function checkVisibility() {
-            clubTemplates.forEach((template) => {
-                const position = template.getBoundingClientRect().top;
 
-                if (position < window.innerHeight * 0.8 && position > -template.clientHeight) {
-                    template.classList.add('show');
-                } else {
-                    template.classList.remove('show');
-                }
-            });
-        }
+        // window.addEventListener('scroll', () => {
+        //     const colorfulHeading = document.querySelector('.club-card');
+        //     const scrollPosition = window.scrollY;
 
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('resize', checkVisibility);
-        checkVisibility(); // Initial check on page load
-    });
+        //     colorfulHeading.style.backgroundPositionY = `${scrollPosition}px`;
+        // });
+
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const clubTemplates = document.querySelectorAll('.club-card');
+
+        //     function checkVisibility() {
+        //         clubTemplates.forEach((template) => {
+        //             const position = template.getBoundingClientRect().top;
+
+        //             if (position < window.innerHeight * 0.8 && position > -template.clientHeight) {
+        //                 template.classList.add('show');
+        //             } else {
+        //                 template.classList.remove('show');
+        //             }
+        //         });
+        //     }
+
+        //     window.addEventListener('scroll', checkVisibility);
+        //     window.addEventListener('resize', checkVisibility);
+        //     checkVisibility(); 
+        // });
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+
+function activate(e) {
+  const items = document.querySelectorAll('.item');
+  e.target.matches('.next') && slider.append(items[0])
+  e.target.matches('.prev') && slider.prepend(items[items.length-1]);
+}
+
+document.addEventListener('click',activate,false);
+});
+
+
+            
     </script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+ 
+ </html>
 
-    <!-- Loading Animation -->
-    <div class="loader-container">
-        <div class="loader"></div>
-    </div>
 
-    <!-- Header -->
-    
-
-<%-include("partials/footer.ejs")%>

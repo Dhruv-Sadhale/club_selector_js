@@ -1,235 +1,214 @@
-/* CSS Styles for Club Grid Templates */
-body{
-     background-color: black; 
-    /* background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Darker tone overlay 
-     repeat;  */
-    font-family: 'Raleway', sans-serif;
-    
-}
-.grid-container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 50vw)); 
-    gap: 50px;
-    
-}
-
-.club-card {
-    background-color: #000000d2;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    place-items: center;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out; 
-    
-}
-/* CSS Styles for Gradual Appearance */
-.club-card {
-    opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.club-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.club-card>img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.club-card >h2{
-    text-align: center;
-    color: #55d6cb;
-}
-.club-card h3 {
-    padding: 10px;
-    margin: 0;
-    font-size: 1.5em;
-    color: #55d6cb;
-}
-
-.club-card p {
-    padding: 0 10px 10px;
-    margin: 0;
-    color: #666;
-    text-align: center;
-
-}
-.club-card:hover {
-    font-weight: bold;
-    cursor: pointer;
-    transform: translateY(13px);
-    border: solid aqua;
-
-}
-.club-card:hover figcaption{
-    font-size: 0.6rem;  
-    position: absolute;
-    height: 80px;
-    width: 160px;
-    display: flex;
-    align-items: end;
-    /* background: linear-gradient(
-        top, rgba(0,0,0,0.9) 0%,
-        rgba(0,0,0,0) 100% 
-    ); */
-    color: white;
-    left: 0px;
-    bottom: 0px;
-    padding-left: 12px;
-    padding-bottom: 10px;
-    border: solid aqua;
-}
- .club-card{
- /* background-color: black; */
- border-radius: 20px;
- border-color: aqua;
- transition: 1000ms all;
- transform-origin: center left;
- box-shadow: 5px 12px rgba(227, 247, 244, 0.5);  
- outline: 1px solid black;
- overflow: hidden;
- display: flex;
- flex-direction: column;
- flex-wrap: wrap;
-
-} 
-.explore-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:    10px;
-    width: 98.5%;
-    padding: 10px;
-    margin-top: auto;
-    background-color:transparent;
-    color: #fff;
-    border: none;
-    border-radius: 8px 8px 8px 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    text-transform: uppercase;
-    /* margin: 25px; */
-    overflow: hidden;
+  }
+  
+  main {
     position: relative;
-    font-weight: 700;
-}
-.explore-btn::before{
-    content: "";
-    /* top: 0 ; */
-    /* left: 0; */
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        120deg, transparent, #00fffc, transparent
-    );
-    transform: translateX(-100%);
-    transition: 0.6s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+  
+  .item {
+    width: 200px;
+    height: 300px;
+    list-style-type: none;
     position: absolute;
-}
-.explore-btn:hover {
-    background: rgb(38, 53, 53);
-    box-shadow: 0 0 20px 5px #00fffc;
-}
-
-/* CSS Styles for Navigation Bar */
-nav {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-.nav-container {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
+    transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  
+    &:nth-child(1), &:nth-child(2) {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+    }
+  
+    &:nth-child(3) { left: 50%; }
+    &:nth-child(4) { left: calc(50% + 220px); }
+    &:nth-child(5) { left: calc(50% + 440px); }
+    &:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+    &:nth-child(7) { left: calc(50% + 880px); opacity: 0;}
+    &:nth-child(8) { left: calc(50% + 1100px);opacity: 0; }
+    &:nth-child(9) { left: calc(50% + 1320px); opacity: 0; }
+  }
+  
+  .content {
+    width: min(30vw,400px);
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    font: 400 0.85rem helvetica,sans-serif;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    opacity: 0;
+    display: none;
+  
+    & .title {
+      font-family: 'arial-black';
+      text-transform: uppercase;
+    }
+  
+    & .description {
+      line-height: 1.7;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.8rem;
+    }
+  
+    & button {
+      width: fit-content;
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+  }
+  
+  .item:nth-of-type(2) .content {
+    display: block;
+    animation: show 0.75s ease-in-out 0.3s forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      filter: blur(5px);
+      transform: translateY(calc(-50% + 75px));
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .nav {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    user-select: none;
+  
+    & .btn {
+      background-color: rgba(255,255,255,0.5);
+      color: rgba(0,0,0,0.7);
+      border: 2px solid rgba(0,0,0,0.6);
+      margin: 0 0.25rem;
+      padding: 0.75rem;
+      border-radius: 50%;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: rgba(255,255,255,0.3);
+      }
+    }
+  }
+  
+  @media (width > 650px) and (width < 900px) {
+    .content {
+      & .title        { font-size: 1rem; }
+      & .description  { font-size: 0.7rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .item {
+      width: 160px;
+      height: 270px;
+  
+      &:nth-child(3) { left: 50%;opacity: 0; }
+      &:nth-child(4) { left: calc(50% + 170px); opacity: 0;}
+      &:nth-child(5) { left: calc(50% + 340px); opacity: 0;}
+      &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+      &:nth-child(7) { left: calc(50% + 680px); opacity: 0;}
+      &:nth-child(8) { left: calc(50% + 850px);opacity: 0; }
+      &:nth-child(9) { left: calc(50% + 1020px); opacity: 0; }
+    }
+  }
+  
+  @media (width < 650px) {
+    .content {
+      & .title        { font-size: 0.9rem; }
+      & .description  { font-size: 0.65rem; }
+      & button        { font-size: 0.7rem; }
+    }
+    .item {
+      width: 130px;
+      height: 220px;
+  
+      &:nth-child(3) { left: 50%;opacity: 0; }
+      &:nth-child(4) { left: calc(50% + 140px);opacity: 0; }
+      &:nth-child(5) { left: calc(50% + 280px);opacity: 0; }
+      &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+      &:nth-child(7) { left: calc(50% + 560px); opacity: 0; }
+      &:nth-child(8) { left: calc(50% + 700px); opacity: 0; }
+      &:nth-child(9) { left: calc(50% + 840px); opacity: 0; }
+    }
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    z-index: 10;
+  }
+  header:hover{
+    background-color: purple;
+    
+  }
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-size: 1.2em;
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
     font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: #0056b3;
-}
-/* CSS Styles for Colorful Heading */
-.colorful-heading {
-    /* background: linear-gradient(45deg, #007BFF, #00FF7F); */
-    background: linear-gradient(
-        top, rgba(0,0,0,0.9) 0%,
-        rgba(0,0,0,0) 100% 
-    );
+    color: white;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00; /* Change to your desired hover color */
+  }
+/*   
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
-    padding: 50px 0;
-    color: #fff;
-    border: solid aqua;
-    margin: 20px;
-}
-
-.colorful-heading h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    
-}
-/* CSS Styles for Headers and Footers */
-header, footer {
-    background-color: #007BFF;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header h2 {
-    font-size: 1.8em;
-}
-
-footer p {
-    margin: 0;
-}
-
-
-/* date added- 27th jan */
-/* .form fieldset{
-    border: none  ;
-    padding: 0;
-    padding: 10px 0;
-    position: relative;
-    clear:  both;
-}
-
-.form fieldset.fieldset-expiration{
-    float: left;
-    width:  60%;
-    
-} */
+   
+  } */
+  
